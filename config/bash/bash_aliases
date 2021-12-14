@@ -1,0 +1,28 @@
+# Aliases
+
+# Quality of Life
+alias p="python3"
+alias c='clear'
+alias lah='ls -lah'
+alias sl='ls'
+alias cpv='rsync -ah --info=progress2'
+alias diff='colordiff'
+alias vv='vim ~/.bash_aliases && resource'
+alias als='cat ~/.bash_aliases'
+alias resource='source ~/.bashrc && echo resourceful'
+
+# System Admin
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
+alias myip='curl ifconfig.me'
+alias ports='netstat -tulanp'
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+alias lsof='sudo lsof'
+alias fixaudio='sudo killall pulseaudio; pulseaudio -k'
+
+# More Attention Later
+alias ytdl='youtube-dl $1'
+alias hide='nordvpn connect'
+alias unhide='nordvpn disconnect'
