@@ -1,4 +1,4 @@
-# NERVOS
+# nervOS
 
 nervOS is under development.  If you are interested in building the development image.  These are the current softwares to check out.
 
