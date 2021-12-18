@@ -9,12 +9,21 @@ fi
 
 function install_nervos_base {
   apt update
-  apt install -y vim docker python3 python3-pip wget
+  apt install -y vim python3 python3-pip wget sudo htop
+  install_docker
   mkdir -p /opt/sabi/lain/
   wget -O /opt/sabi/lain/lain.py https://raw.githubusercontent.com/sabi/lain/main/lain.py
   python3 /opt/sabi/lain/lain.py
   chmod 755 /opt/sabi/lain/lain.py
   }
+
+function install_docker {
+  apt install -y ca-certificates curl gnupg lsb-release
+  curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  apt update
+  apt -y install docker-ce docker-ce-cli containerd.io
+}
 
 function install_workspace_tools {
   apt install -y i3-wm
