@@ -9,7 +9,7 @@ fi
 
 function install_nervos_base {
   apt update
-  apt install -y vim python3 python3-pip wget sudo htop
+  apt install -y vim python3 python3-pip wget sudo htop apache2-utils
   install_docker
   mkdir -p /opt/sabi/lain/
   wget -O /opt/sabi/lain/lain.py https://raw.githubusercontent.com/sabi/lain/main/lain.py
