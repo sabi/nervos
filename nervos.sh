@@ -26,7 +26,7 @@ function install_docker {
 }
 
 function install_workspace_tools {
-  apt install -y i3-wm
+  apt install -y i3-wm imagemagick
   pip3 install pywal
   }
 
