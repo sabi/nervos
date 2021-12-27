@@ -13,7 +13,7 @@ alias resource='source ~/.bashrc && echo resourceful'
 
 # System Admin
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
-alias myip='curl ifconfig.me'
+alias myip='curl ifconfig.me && echo'
 alias ports='netstat -tulanp'
 alias reboot='sudo /sbin/reboot'
 alias poweroff='sudo /sbin/poweroff'
