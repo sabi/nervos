@@ -1,0 +1,14 @@
+#
+
+# General Options
+
+allow_ssh_passwords = false
+ssh_port = 22
+
+# Workstation Options
+
+taskbar_location = 'top' # Options: top, bottom
+
+# Color Theme and System Wallpaper
+wallpaper_directory_path = '~/.config/nervos/wallpaper' # Multi wallpapers supported
+wallpaper_time_interval = 0 # How often should wallpaper change? In minutes; 0 for never
