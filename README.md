@@ -2,11 +2,8 @@
 
 nervOS is under development.  If you are interested in building the development image.  These are the current softwares to check out.
 
-#### Common packages
-```
-apt install vim python3-pip 
-```
 
+## Github Repos to Mention
 #### [pywal](https://github.com/dylanaraps/pywal)
 ```
 apt install imagemagick
