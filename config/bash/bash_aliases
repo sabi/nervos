@@ -7,7 +7,7 @@ alias lah='ls -lah'
 alias sl='ls'
 alias cpv='rsync -ah --info=progress2'
 alias diff='colordiff'
-alias vv='vim ~/.bash_aliases && resource'
+alias av='vim ~/.bash_aliases && resource'
 alias als='cat ~/.bash_aliases'
 alias resource='source ~/.bashrc && echo resourceful'
 
