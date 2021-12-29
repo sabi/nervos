@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Change to desired user
-user='sabi'
+echo "Enter username: "
+read user
 
 version='0.1'
 
