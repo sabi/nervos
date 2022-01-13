@@ -65,7 +65,29 @@ function system_install_workspace {
   set_system_configs
   set_user_configs
   }
-  
+
+# Non-free
+function install_discord {
+  wget http://ftp.mx.debian.org/debian/pool/main/libi/libindicator/libindicator3-7_0.5.0-3+b1_amd64.deb
+  sudo apt install ./libindicator3-7_*_amd64.deb
+  wget http://ftp.mx.debian.org/debian/pool/main/liba/libappindicator/libappindicator3-1_0.4.92-7_amd64.deb
+  sudo apt install ./libappindicator3-1_*_amd64.deb
+  wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.deb
+  dpkg-deb -x discord-0.0.16.deb unpack
+  dpkg-deb --control discord-0.0.16.deb
+  mv DEBIAN/ unpack/
+  sed -i 's/libappindicator3-1/libayatana-appindicator3-1/g' unpack/DEBIAN/control
+  dpkg -b unpack discord-fixed.deb
+  sudo apt install ./discord-fixed.deb -y
+}
+
+function install_spotify {
+  curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
+  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+  curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
+  sudo apt update && sudo apt install spotify-client -y
+}
+
 COMMAND=$(echo "$1"|tr "{A-Z}" "{a-z}")
 
 case "$COMMAND" in
