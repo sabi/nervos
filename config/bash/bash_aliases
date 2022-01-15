@@ -21,6 +21,8 @@ alias halt='sudo /sbin/halt'
 alias shutdown='sudo /sbin/shutdown'
 alias lsof='sudo lsof'
 alias fixaudio='sudo killall pulseaudio; pulseaudio -k'
+alias list-timezones='sudo timedatectl list-timezones'
+alias set-timezone='sudo timedatectl set-timezone'
 
 # More Attention Later
 alias ytdl='youtube-dl $1'
