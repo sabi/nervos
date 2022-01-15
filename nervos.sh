@@ -50,6 +50,7 @@ function set_user_configs {
   cp config/bash/bash_aliases ~/.bash_aliases
   cp config/i3/config ~/.config/i3/config
   cp config/i3/i3status.conf ~/.i3status.conf
+  cp config/.Xresources && xrdb -merge ~/.Xresources
   source ~/.bashrc
   exit
   }
