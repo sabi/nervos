@@ -88,6 +88,10 @@ function install_spotify {
   sudo apt update && sudo apt install spotify-client -y
 }
 
+function configure_firefox {
+  echo TODO: Configure Autoscroll
+}
+
 COMMAND=$(echo "$1"|tr "{A-Z}" "{a-z}")
 
 case "$COMMAND" in
