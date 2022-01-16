@@ -12,7 +12,7 @@ fi
 
 function install_nervos_base {
   apt update
-  apt install -y vim python3 python3-pip wget sudo htop apache2-utils dialog lsof
+  apt install -y vim python3 python3-pip wget sudo htop apache2-utils dialog lsof file
   install_docker
   install_lain
   }
