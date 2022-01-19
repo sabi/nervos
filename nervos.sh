@@ -18,6 +18,7 @@ function install_nervos_base {
   }
 
 function install_lain {
+  pip3 install requests
   mkdir -p /opt/sabi/lain/
   wget -O /opt/sabi/lain/lain.py https://raw.githubusercontent.com/sabi/lain/main/lain.py
   python3 /opt/sabi/lain/lain.py
