@@ -15,7 +15,12 @@ function install_nervos_base {
   apt install -y vim python3 python3-pip wget sudo htop apache2-utils dialog lsof file
   install_docker
   install_lain
+  install_central_nervos_system
   }
+
+function install_central_nervos_system {
+	echo TODO
+}
 
 function install_lain {
   pip3 install requests
@@ -33,15 +38,15 @@ function install_docker {
   apt -y install docker-ce docker-ce-cli containerd.io docker-compose
 }
 
-function install_workspace_tools {
-  apt install -y i3-wm imagemagick i3lock
-  pip3 install pywal
-  }
-
 function set_system_configs {
   cp config/ssh/sshd_config /etc/ssh/sshd_config
   chmod 644 /etc/ssh/sshd_config
   systemctl restart ssh
+  }
+
+function install_workspace_tools {
+  apt install -y i3-wm imagemagick i3lock
+  pip3 install pywal
   }
 
 function set_user_configs {
@@ -92,7 +97,7 @@ function install_spotify {
 
 function configure_firefox {
   echo TODO: Configure Autoscroll
-}
+} 
 
 COMMAND=$(echo "$1"|tr "{A-Z}" "{a-z}")
 
