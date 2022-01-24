@@ -28,3 +28,7 @@ nervOS is under development, but the alpha is available.  In general, its curren
 
 ## Github Repos to Mention
 - [pywal](https://github.com/dylanaraps/pywal)
+
+## Notes
+
+- Docker Flask App builder assumes app.py is entrypoint, assumes whole project inside directory called `app`, assumes `requirements.txt` is present in `app`, assumes Flask app is listening on `host='0.0.0.0', port=80`
