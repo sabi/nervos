@@ -16,6 +16,12 @@ def create_docker_compose():
     os.system("sed -i 's/$IMAGENAME/" + image_name + "/g " + PATH + "docker-compose.yaml")
     os.system("sed -i 's/$DOMAINNAME/" + domain_name + "/g " + PATH + "docker-compose.yaml")
 
+def create_flask_directories():
+    pass
+
+def create_flask_app():
+    os.system('cp flask-app-template.py ' + PATH + 'app/app.py')
+
 def main():
     args = parse_args()
     os.system('cp flask-app-core.Dockerfile ' + PATH + 'Dockerfile')
