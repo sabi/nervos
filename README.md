@@ -2,6 +2,10 @@
 
 nervOS is under development, but the alpha is available.  In general, its current state, nervOS is compatible with any Linux distribution using the `apt` package manager; this includes: Debian, Ubuntu, etc. We are using Debian 11 for our development environment.
 
+## Description
+
+nervOS is a Linux distro based on Debian.  nervOS is distro for developers. Designed to be used on your workstation with workflow in mind. Use the same distro for your production deployments.  
+
 ## Installation
 - Prerequisite: Linux machine. Currently this has only been tested with a fresh installation of Debian 11 without any of the recommend software installed.  In theory this should work the same for server versions of any major distro with the `apt` package manager.
 - To install workstation build for local development: `wget -O - https://raw.githubusercontent.com/sabi/nervos/main/nervos.sh | sudo bash -s workstation` 
