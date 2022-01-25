@@ -1,6 +1,6 @@
 # nervOS
 
-nervOS is under development, but the alpha is available.  In general, its current state, nervOS is compatible with any Linux distribution using the `apt` package manager; this includes: Debian, Ubuntu, etc. We are using Debian 11 for our development environment.
+nervOS is under development, but here are the files being used to create the image.  In general, its current state, nervOS is compatible with any Linux distribution using the `apt` package manager; this includes: Debian, Ubuntu, etc. We are using Debian 11 for our development environment.
 
 ## Description
 
