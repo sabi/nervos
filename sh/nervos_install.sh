@@ -47,6 +47,7 @@ function set_system_configs {
 function install_workspace_tools {
   apt install -y i3-wm imagemagick i3lock
   pip3 install pywal
+  install_brave
   }
 
 function set_user_configs {
@@ -59,6 +60,14 @@ function set_user_configs {
   cp config/.Xresources && xrdb -merge ~/.Xresources
   source ~/.bashrc
   exit
+  }
+
+function install_brave {
+  apt install apt-transport-https curl -y
+  curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+  apt update
+  apt install brave-browser -y
   }
 
 function system_install_server {
@@ -95,7 +104,7 @@ function install_spotify {
   sudo apt update && sudo apt install spotify-client -y
 }
 
-function configure_firefox {
+function configure_web_browser {
   echo TODO: Configure Autoscroll
 } 
 
