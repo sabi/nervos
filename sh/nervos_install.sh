@@ -45,7 +45,7 @@ function set_system_configs {
   }
 
 function install_workspace_tools {
-  apt install -y i3-wm imagemagick i3lock
+  apt install -y i3-wm imagemagick i3lock rofi
   pip3 install pywal
   install_brave
   }
