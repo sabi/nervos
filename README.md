@@ -11,6 +11,9 @@ nervOS is a Linux distro based on Debian.  nervOS is distro for developers. Desi
 - To install workstation build for local development: `wget -O - https://raw.githubusercontent.com/sabi/nervos/main/nervos.sh | sudo bash -s workstation` 
 - To install server build for production servers: `wget -O - https://raw.githubusercontent.com/sabi/nervos/main/nervos.sh | sudo bash -s server`
 
+## Quick and Dirty Installs
+- Install Bash profile and aliases: `wget -O ~/.bashrc https://raw.githubusercontent.com/sabi/nervos/main/config/bash/bashrc && wget -O ~/.bash_aliases https://raw.githubusercontent.com/sabi/nervos/main/config/bash/bash_aliases && source ~/.bashrc`
+
 ## Operations
 
 ### i3
