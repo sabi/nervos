@@ -70,6 +70,14 @@ function install_brave {
   apt install brave-browser -y
   }
 
+function install_atom {
+  wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | apt-key add -
+  sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+  apt update
+  sudo apt install atom -y
+  }
+  
+
 function system_install_server {
   install_nervos_base
   set_system_configs
